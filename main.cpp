@@ -4,15 +4,13 @@
 #include <algorithm>
 using namespace std;
 
-void printOut(vector<int> const &input)
-{
-    copy(input.begin(),
-              input.end(),
-              ostream_iterator<int>(cout, ","));     
-    cout << endl; 
+void printOut(vector<int> const &vData){    
+    for (auto it = vData.begin(); it != vData.end(); it++)
+    {
+        cout << *it << " ";
+    } 
+    cout << endl;
 }
-
-
 
 void bubbleSort(vector<int> &v)
 {
